@@ -1,0 +1,12 @@
+data/
+results/
+code_bak/
+__pycache__/
+.ipynb_checkpoints/
+tmp
+mid_results/
+**/logs/
+figs/*
+tmp.*
+*.swp
+backup/
