@@ -24,7 +24,7 @@ from joblib import Parallel, delayed
 from constants import RES_ROOT 
 from hdf_utils.data_gen import gen_simu_sinica_dataset
 from utils.misc import save_pkl, load_pkl
-from optimization.opt import HDFOpt
+from optimization.opt import HDHTOpt
 from scenarios.simu_linear_sinica0 import settings
 
 
@@ -96,7 +96,7 @@ def _main_run_fn(seed, lam, N, setting, is_save=False, is_cv=False, verbose=2):
                                    data_params=data_gen_params.data_params, 
                                    seed=seed, 
                                    verbose=verbose);
-        hdf_fit = HDFOpt(lam=_setting.lam, 
+        hdf_fit = HDHTOpt(lam=_setting.lam, 
                          sel_idx=_setting.sel_idx, 
                          model_type=_setting.model_type,
                          verbose=verbose, 

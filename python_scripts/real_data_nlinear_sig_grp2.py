@@ -45,7 +45,7 @@ from joblib import Parallel, delayed
 
 from constants import DATA_ROOT, RES_ROOT, FIG_ROOT, MIDRES_ROOT
 from utils.misc import save_pkl, load_pkl
-from optimization.opt import HDFOpt
+from optimization.opt import HDHTOpt
 
 from joblib import Parallel, delayed
 
@@ -194,7 +194,7 @@ def _run_main_fn(lam, N, setting, is_save=False, is_cv=False, verbose=2):
     
     
     if not (save_dir/f_name).exists():
-        hdf_fit = HDFOpt(lam=_setting.lam, 
+        hdf_fit = HDHTOpt(lam=_setting.lam, 
                          sel_idx=_setting.sel_idx, 
                          model_type=_setting.model_type,
                          verbose=verbose, 

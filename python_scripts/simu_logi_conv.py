@@ -25,7 +25,7 @@ from joblib import Parallel, delayed
 from constants import DATA_ROOT, RES_ROOT, FIG_ROOT, MIDRES_ROOT
 from hdf_utils.data_gen import gen_simu_sinica_dataset
 from utils.misc import save_pkl, load_pkl, bcross_entropy_loss
-from optimization.opt import HDFOpt
+from optimization.opt import HDHTOpt
 
 import argparse
 parser = argparse.ArgumentParser(description='run')
@@ -169,7 +169,7 @@ def _main_run_fn(seed, n, lam, N, setting, is_save=False, is_cv=False, verbose=2
                                    data_params=data_gen_params.data_params, 
                                    seed=seed, 
                                    verbose=verbose);
-        hdf_fit = HDFOpt(lam=_setting.lam, 
+        hdf_fit = HDHTOpt(lam=_setting.lam, 
                          sel_idx=_setting.sel_idx, 
                          model_type=_setting.model_type,
                          verbose=verbose, 

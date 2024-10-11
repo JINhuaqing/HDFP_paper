@@ -31,7 +31,7 @@ if not logger.hasHandlers():
     
 
     
-class HDFOpt():
+class HDHTOpt():
     """
     Perform HDF optimization.
     """

@@ -48,7 +48,7 @@ from utils.functions import logit_fn
 from utils.misc import save_pkl, load_pkl
 from splines import obt_bsp_obasis_Rfn, obt_bsp_basis_Rfn_wrapper
 from projection import euclidean_proj_l1ball
-from optimization.opt import HDFOpt
+from optimization.opt import HDHTOpt
 from hdf_utils.fns_sinica import  fourier_basis_fn
 
 from joblib import Parallel, delayed
@@ -237,7 +237,7 @@ def _run_main_fn(out_ix, sig_roi_idxs, lam, N, setting,  prefix, is_save=False, 
     
     
     if not (save_dir/f_name).exists():
-        hdf_fit = HDFOpt(lam=_setting.lam, 
+        hdf_fit = HDHTOpt(lam=_setting.lam, 
                          sel_idx=_setting.sel_idx, 
                          model_type=_setting.model_type,
                          verbose=verbose, 

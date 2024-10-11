@@ -1,4 +1,4 @@
-This repo containing the code of simulation and real data for HDFP paper
+This repo containing the code of simulation and real data for HDHT paper
 
 To run the code, it is suggested to use `docker`, you can pull my image via 
 
@@ -29,8 +29,8 @@ Refer to `python_scripts` readme file for details.
 
 - Main python code are in `mypkg` code 
     
-    - `mypkg/optimization/opt.py` contains the may class for `HDFP`, you may refer to this file on how to use it 
+    - `mypkg/optimization/opt.py` contains the may class for `HDHT`, you may refer to this file on how to use it 
 
 - `matlab_scripts` folder contains the code for get PSD from raw time series as well as the code for Bootstrap method (credit to Prof Kaijie Xue) 
 
-- A clean version of my HDFP implentation is ongoing.
+- A clean version of my HDHT implentation is ongoing.
